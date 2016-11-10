@@ -1,4 +1,4 @@
-package com.appswallet.rosie.app.inapppurchaseservice;
+package com.your.package;
 
 import android.app.Activity;
 import android.app.PendingIntent;
