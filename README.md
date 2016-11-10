@@ -61,6 +61,26 @@ method calls.</p>
 
 </div></div></div>
 
+<div class="dac-toggle dac-mobile is-expanded"><h2 id="billing-permission" data-toggle="section" style="padding-bottom: 0px;"><span class="dac-visible-mobile-inline-block"><i class="dac-toggle-expand dac-sprite dac-expand-more-black"></i><i class="dac-toggle-collapse dac-sprite dac-expand-less-black"></i></span>Updating your app's manifest</h2><hr><div class="dac-toggle-content dac-expand"><div>
+
+<p>
+  In-app billing relies on the Google Play application, which handles all
+  of the communication between your application and the Google Play server. To use the
+  Google Play application, your application must request the proper permission.
+  You can do this by adding the <code>com.android.vending.BILLING</code> permission
+  to your AndroidManifest.xml file. If your application does not declare the
+  In-app Billing permission, but attempts to send billing requests, Google Play
+  refuses the requests and responds with an error.
+</p>
+
+<p>
+  To give your app the necessary permission, add this line in the <code>AndroidManifest.xml</code> file:
+</p>
+
+<pre class="prettyprint"><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"com.android.vending.BILLING"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre>
+
+</div></div></div>
+
 
 # Usage of InAppPurchase class
 
