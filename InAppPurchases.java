@@ -30,6 +30,10 @@ public class InAppPurchases implements ServiceConnection {
     IInAppBillingService mService;
     ServiceConnection serviceConnection;
     Context context;
+    
+    /* List of Product Ids you need user to purchase must be added
+       in inAppProduct at Google play developer console
+       https://play.google.com/apps/publish/? */
     ArrayList<String> skuList = new ArrayList<String>(){{
         add("premium_upgrade");
     }};
