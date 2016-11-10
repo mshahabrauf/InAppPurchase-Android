@@ -1,4 +1,4 @@
-package com.appswallet.rosie.app;
+package com.your.package;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -20,21 +20,6 @@ public class SharedPreference {
 
         this.mContext = mContext;
         mPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-    }
-
-    public boolean setUser()
-    {
-        SharedPreferences.Editor prefsEditor = mPrefs.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(User.getInstance());
-        prefsEditor.putString(USER, json);
-        return prefsEditor.commit();
-    }
-    public User getUser()
-    {
-        Gson gson = new Gson();
-        String json = mPrefs.getString(USER, "");
-        return gson.fromJson(json, User.class);
     }
     public boolean setPremiumUpgrade(boolean premiumUpgrade)
     {
